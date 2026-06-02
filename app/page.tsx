@@ -3,7 +3,7 @@
 import { useCallback, useRef, useState } from "react";
 import { PERSONAS } from "@/lib/personas";
 import { GOALS } from "@/lib/goals";
-import Markdown from "@/components/Markdown";
+import Output from "@/components/Output";
 
 const DURATIONS = [15, 30, 45, 60];
 
@@ -196,7 +196,7 @@ function Header() {
           </div>
         </div>
         <span className="hidden text-[13px] text-ink-muted sm:inline">
-          Move your audience from A → B
+          Get buy-in for your idea
         </span>
       </div>
     </header>
@@ -752,26 +752,28 @@ function ResultView({
         </div>
       </div>
 
-      <div className="rounded-2xl border border-line bg-paper p-6 sm:p-8">
-        {error ? (
-          <div className="rounded-lg border border-accent/30 bg-accent/5 p-4 text-[14px] text-accent">
-            {error}
-          </div>
-        ) : null}
+      {error ? (
+        <div className="mb-4 rounded-xl border border-accent/30 bg-accent/5 p-4 text-[14px] text-accent">
+          {error}
+        </div>
+      ) : null}
 
-        {!output && loading ? (
-          <div className="flex items-center gap-2 text-[14px] text-ink-muted">
-            <Dot /> <Dot /> <Dot />
-            <span className="ml-1">Shaping your narrative…</span>
-          </div>
-        ) : (
-          <Markdown content={output} />
-        )}
-
-        {output && loading ? (
-          <span className="ml-0.5 inline-block h-4 w-2 animate-pulse bg-ink align-middle" />
-        ) : null}
-      </div>
+      {!output && loading ? (
+        <div className="flex items-center gap-2 rounded-xl border border-line bg-paper p-6 text-[14px] text-ink-muted">
+          <Dot /> <Dot /> <Dot />
+          <span className="ml-1">Shaping your narrative…</span>
+        </div>
+      ) : (
+        <>
+          <Output content={output} />
+          {loading ? (
+            <div className="mt-3 flex items-center gap-2 text-[13px] text-ink-faint">
+              <span className="inline-block h-3.5 w-1.5 animate-pulse bg-ink-faint align-middle" />
+              <span>Still writing…</span>
+            </div>
+          ) : null}
+        </>
+      )}
     </div>
   );
 }

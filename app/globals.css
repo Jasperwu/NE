@@ -36,6 +36,9 @@ body {
 }
 
 /* Rendered markdown output from the expert */
+.prose-output > :first-child {
+  margin-top: 0;
+}
 .prose-output h2 {
   font-size: 1.0625rem;
   font-weight: 600;
@@ -44,10 +47,18 @@ body {
   color: theme("colors.ink.DEFAULT");
 }
 .prose-output h3 {
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   font-weight: 600;
-  margin: 1.2rem 0 0.4rem;
-  color: theme("colors.ink.soft");
+  letter-spacing: -0.005em;
+  margin: 1.3rem 0 0.5rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid theme("colors.line");
+  color: theme("colors.ink.DEFAULT");
+}
+.prose-output h3:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
 }
 .prose-output p {
   margin: 0.5rem 0;
@@ -56,12 +67,22 @@ body {
 }
 .prose-output ul,
 .prose-output ol {
-  margin: 0.5rem 0 0.5rem 1.1rem;
+  margin: 0.5rem 0 0.5rem 1.25rem;
   line-height: 1.7;
   color: theme("colors.ink.soft");
 }
+.prose-output ol {
+  list-style: decimal;
+}
+.prose-output ul {
+  list-style: disc;
+}
 .prose-output li {
-  margin: 0.25rem 0;
+  margin: 0.4rem 0;
+  padding-left: 0.15rem;
+}
+.prose-output li::marker {
+  color: theme("colors.ink.faint");
 }
 .prose-output strong {
   color: theme("colors.ink.DEFAULT");
