@@ -4,6 +4,7 @@ import { useCallback, useRef, useState } from "react";
 import { PERSONAS } from "@/lib/personas";
 import { GOALS } from "@/lib/goals";
 import Output from "@/components/Output";
+import PersonaIcon from "@/components/PersonaIcon";
 
 const DURATIONS = [15, 30, 45, 60];
 
@@ -433,11 +434,13 @@ function AudienceStep({
               <div className="flex items-center justify-between">
                 <div
                   className={[
-                    "flex h-10 w-10 items-center justify-center rounded-full text-lg",
-                    p.avatar,
+                    "flex h-11 w-11 items-center justify-center rounded-xl p-2 ring-1 transition",
+                    on
+                      ? "bg-ink text-white ring-ink"
+                      : "bg-paper-soft text-ink-soft ring-line group-hover:text-ink",
                   ].join(" ")}
                 >
-                  {p.emoji}
+                  <PersonaIcon id={p.id} className="block h-full w-full" />
                 </div>
                 <span
                   className={[
@@ -573,7 +576,7 @@ function TailorStep({
                   key={a.id}
                   className="inline-flex items-center gap-1.5 rounded-full bg-paper-edge px-2.5 py-1 text-[13px]"
                 >
-                  <span>{a.emoji}</span>
+                  <PersonaIcon id={a.id} className="block h-4 w-4 text-ink-soft" />
                   {a.name}
                 </span>
               ))}

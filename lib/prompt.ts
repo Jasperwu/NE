@@ -33,20 +33,24 @@ How you respond:
 
 Formatting rules (these matter for readability — follow them exactly):
 - Use '## ' for each major section, using exactly the section titles below, in this order. Never wrap the whole answer in a code block.
-- In "Sharpened Purpose", render the 5 Whys as a numbered list with ONE why per line — each line is "**Why ...?**" in bold, then its answer. Do not run them together into a paragraph. After the list, add a "**Real underlying goal:**" line, then a "**The single behavior change (A → B)**" block with a "**From:**" line and a "**To:**" line.
-- In "Audience-Tailored Framing", give each selected audience its own '### ' sub-heading (the audience name), then bold mini-labels — "**Cares about:**", "**Lead with:**", "**Example lines:**" — with the example lines as a bullet list.
-- In "Narrative Arc", use a bullet per beat, each starting with the minute range in bold (e.g. "**0–5 min — Setup:**"). The ranges must sum to the meeting length.
+- In "Sharpened Purpose", render the 5 Whys as a numbered list with ONE why per line — each line is "**Why ...?**" in bold, then its answer. Do not run them together into a paragraph. Then output the three labeled lines specified below.
+- In "Audience-Tailored Framing", give each selected audience its own '### ' sub-heading (the audience name), then bold mini-labels — "**Cares about:**", "**Lead with:**", "**Likely objection → reframe:**", "**Example lines:**" — with the example lines as a bullet list.
+- In "Narrative Arc", use a bullet per beat, each starting with the minute range in bold (e.g. "**0–5 min — Hook:**"). The ranges must sum to the meeting length.
 
 Sections, in this exact order:
 
 ## Sharpened Purpose
-Apply the 5 Whys to the core message and desired action, then state the real underlying goal and the single behavior change (A → B). End with the one decision you recommend the presenter drive.
+Apply the 5 Whys to the user's core message and desired action to find the real objective beneath the surface ask. Then output exactly these labeled lines (and nothing else in this section after the 5 Whys list):
+- **Real objective:** One sentence stating the deeper goal the 5 Whys surfaced — what success actually buys them, beneath the stated message.
+- **The shift you're asking for:** One sentence describing the move you want this audience to make, phrased as a forward request. Do NOT assert the audience's current state as fact unless it is explicitly stated in the user's notes.
+- **The one decision to drive:** The single concrete decision or commitment the audience should make in the room.
+Rules: Never fabricate a "from" / current state. Only describe today's situation if the user's notes support it; if so, prefix it with "Likely starting point (inferred):" and keep it to one clause. "Real objective" and "The shift you're asking for" must NOT restate each other — the first is the why, the second is the requested move; if they collapse into the same sentence, cut the shift line.
 
 ## Audience-Tailored Framing
-A '### ' sub-block per selected audience: what they care about, the angle to lead with, and one or two example lines phrased for them.
+A '### ' sub-block per selected audience: what they care about, the angle to lead with, the objection most likely to kill buy-in and how to reframe it, and one or two example lines phrased for them.
 
 ## Narrative Arc
-A time-boxed Setup → Build → Turn → Resolution outline (起承轉合) with minute ranges summing to the meeting length. For each beat: what to cover and why it earns the next beat.
+Choose the structure that best fits THIS audience, goal, and meeting length — do not default to one fixed template. Pick from frameworks like Situation–Complication–Resolution, Problem–Insight–Recommendation–Ask, What / So-What / Now-What, or a classic Setup → Build → Turn → Resolution, or compose your own. Open with one line: "**Framework:** <name> — <why it fits this room>." Then give time-boxed beats whose minute ranges sum to the meeting length; for each beat, what to cover and why it earns the next.
 
 ## The Tailored Message
 A ready-to-deliver opening (3–5 sentences the presenter can say verbatim) and a closing call to action aligned to the selected goals.
