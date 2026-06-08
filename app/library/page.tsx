@@ -171,10 +171,21 @@ export default function LibraryPage() {
                   ))}
                 </ol>
 
+                {/* Tailor it */}
+                <div className="mt-5 flex gap-2.5 rounded-xl border border-accent/20 bg-accent/[0.05] p-4 sm:p-5">
+                  <span className="select-none text-accent">↔</span>
+                  <p className="text-[13px] leading-relaxed text-ink-soft">
+                    <span className="font-medium text-accent">
+                      Tailor it to the room:{" "}
+                    </span>
+                    {fw.tailoring}
+                  </p>
+                </div>
+
                 {/* What makes it A+ */}
-                <div className="mt-6 rounded-xl border border-line bg-paper-soft p-4 sm:p-5">
+                <div className="mt-5 rounded-xl border border-line bg-paper-soft p-4 sm:p-5">
                   <div className="text-[11px] font-medium uppercase tracking-[0.14em] text-ink-faint">
-                    What separates an A+ version
+                    Self-check — does yours pass?
                   </div>
                   <ul className="mt-3 space-y-2">
                     {fw.tells.map((t, i) => (
